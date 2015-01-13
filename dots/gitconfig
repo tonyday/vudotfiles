@@ -1,0 +1,15 @@
+[alias]
+    st = status
+    co = checkout
+    ff = merge --ff-only
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[user]
+    name = Tony Day
+    email = tony@lazylabs.com
+[core]
+    editor = vim
+    whitespace = off
+[advice]
+    statusuoption = false
+[color]
+    ui = true
