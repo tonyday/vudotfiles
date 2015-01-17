@@ -3,6 +3,7 @@
     co = checkout
     ff = merge --ff-only
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    cm = commit -m
 [user]
     name = Tony Day
     email = tony@lazylabs.com
