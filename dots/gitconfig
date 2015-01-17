@@ -4,6 +4,7 @@
     ff = merge --ff-only
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     cm = commit -m
+    pom = push origin master
 [user]
     name = Tony Day
     email = tony@lazylabs.com
