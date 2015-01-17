@@ -8,3 +8,6 @@ alias ..="cd .."
 
 alias be="bundle exec"
 
+# path for global npm packages
+export PATH=~/npm-global/bin:$PATH
+
