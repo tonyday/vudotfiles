@@ -1,7 +1,12 @@
-set number
 set nocompatible
+set number
 syntax on
 filetype on
 filetype indent on
 filetype plugin on
-
+set guifont=Consolas:h12:cANSI
+set ignorecase
+set incsearch
+set hlsearch
+set hidden
+set cursorline
