@@ -26,3 +26,6 @@ set statusline +=%2*0x%04B\ %*          " character under cursor
 set backspace=indent,start,eol
 set wildmenu
 set laststatus=2
+
+set noexrc
+
