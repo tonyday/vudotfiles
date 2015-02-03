@@ -42,3 +42,21 @@ nnoremap <silent> <leader>ww :set wrap!<cr>      " Toggle wrapping of long lines
 nnoremap <silent> <leader>ev :e $MYVIMRC<cr>     " Edit vimrc
 nnoremap <silent> <leader>sv :so $MYVIMRC<cr>    " Reload (source) vimrc
 nnoremap <silent> <leader>nh :nohlsearch<cr>     " Switch off search highlighting
+
+
+
+
+
+
+
+" this statusline colouring stuff works - not sure why previous stuff does not - need to investigate
+
+set statusline=%t\ %m%r%y%=(ascii=\%03.3b,hex=\%02.2B)\ (%l/%L,%c)\ (%P)
+set laststatus=2
+" change highlighting based on mode
+if version >= 700
+  highlight statusLine cterm=bold ctermfg=black ctermbg=red gui=bold guifg=black guibg=red
+  au InsertLeave * highlight StatusLine cterm=bold ctermfg=black ctermbg=red gui=bold guifg=black guibg=red
+  au InsertEnter * highlight StatusLine cterm=bold ctermfg=black ctermbg=green gui=bold guifg=black guibg=green
+endif
+
