@@ -187,11 +187,7 @@ set undofile
 let g:solarized_termcolors=256
 " let g:solarized_termtrans=1
 let g:solarized_visibility="high"
-if exists('sol_dark')
-  set background=dark
-else
-  set background=light
-endif
+set background=dark
 silent! colorscheme solarized
 call togglebg#map("<F5>")
 
