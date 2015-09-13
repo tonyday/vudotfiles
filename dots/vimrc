@@ -63,7 +63,11 @@ Plugin 'tpope/vim-rails'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
-" Plugin 'ruby-matchit'
+
+" Enable Ruby text objects
+Plugin 'vim-scripts/matchit.zip.git'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -351,3 +355,5 @@ set splitbelow
 set cursorline
  " Tell NERDCOmmenter - "# foo" instead of "#foo"
 let NERDSpaceDelims = 1
+" Speed-up recognition of escape key
+set timeout timeoutlen=1000 ttimeoutlen=10
