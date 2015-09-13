@@ -1,0 +1,4 @@
+alias be="bundle exec"
+alias bef="be foreman"
+alias befr="bef run"
+# vim: set filetype=sh :
