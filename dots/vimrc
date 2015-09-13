@@ -63,6 +63,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
+Plugin 'jgdavey/vim-blockle.git'
 
 " Enable Ruby text objects
 Plugin 'vim-scripts/matchit.zip.git'
