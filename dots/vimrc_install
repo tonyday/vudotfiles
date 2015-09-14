@@ -1,0 +1,10 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+if filereadable(expand("~/.vim_vundles.vim"))
+  source ~/.vim_vundles.vim
+endif
+call vundle#end()
+filetype plugin indent on
