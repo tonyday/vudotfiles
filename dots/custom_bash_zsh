@@ -1,5 +1,7 @@
 alias be="bundle exec"
 alias bef="be foreman"
 alias befr="bef run"
+alias gpom="git push origin master"
+alias gphm="git push heroku master"
 export LESS=-SR
 # vim: set filetype=sh :
