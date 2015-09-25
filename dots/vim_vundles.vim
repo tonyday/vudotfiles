@@ -59,3 +59,8 @@ Plugin 'vim-scripts/matchit.zip.git'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 
+" Some more colour schemes
+Plugin 'endel/vim-github-colorscheme'
+
+" Some searching love
+Plugin 'rking/ag.vim'
