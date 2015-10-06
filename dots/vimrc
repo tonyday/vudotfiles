@@ -283,6 +283,7 @@ map <silent> ,b :CtrlPBuffer<cr>
 map <silent> ,<space> :nohl<cr>
 map <silent> ,, :Gdiff<cr>
 map <silent> ,. :q<cr>
+map <silent> ,n :set number!<cr>
 map <silent> <space> <c-w>
 map <silent> ,d :set background=dark<cr>:colorscheme solarized<cr>
 map <silent> ,l :set background=light<cr>:colorscheme solarized<cr>
