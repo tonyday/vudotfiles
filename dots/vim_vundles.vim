@@ -64,3 +64,9 @@ Plugin 'endel/vim-github-colorscheme'
 
 " Some searching love
 Plugin 'rking/ag.vim'
+
+" Auto insert "end" structures
+Plugin 'tpope/vim-endwise'
+
+" Emmet-style HTML/CSS coding
+Plugin 'mattn/emmet-vim'
