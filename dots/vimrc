@@ -301,3 +301,5 @@ set cursorline
 let NERDSpaceDelims = 1
 " Speed-up recognition of escape key
 set timeout timeoutlen=1000 ttimeoutlen=10
+
+let g:airline#extensions#tabline#enabled = 1

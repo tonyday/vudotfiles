@@ -70,3 +70,5 @@ Plugin 'tpope/vim-endwise'
 
 " Emmet-style HTML/CSS coding
 Plugin 'mattn/emmet-vim'
+
+Plugin 'nanotech/jellybeans.vim'
