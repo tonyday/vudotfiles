@@ -1,3 +1,4 @@
+set shell=bash
 " Vundle
 "==============================================================================
 "
@@ -290,6 +291,7 @@ map <silent> ,p :set paste!<cr>
 map <silent> <space> <c-w>
 map <silent> ,d :set background=dark<cr>:colorscheme solarized<cr>
 map <silent> ,l :set background=light<cr>:colorscheme solarized<cr>
+map <silent> ,c :set background=light<cr>:colorscheme default<cr>
 
 " Tell CtrlP to show dot files
 let g:ctrlp_show_hidden = 1
@@ -297,9 +299,17 @@ let g:ctrlp_show_hidden = 1
 set splitright
 set splitbelow
 set cursorline
- " Tell NERDCOmmenter - "# foo" instead of "#foo"
+
+" Tell NERDCOmmenter - "# foo" instead of "#foo"
 let NERDSpaceDelims = 1
+
 " Speed-up recognition of escape key
 set timeout timeoutlen=1000 ttimeoutlen=10
 
+" Tell Airline to show tabs with buffer names
 let g:airline#extensions#tabline#enabled = 1
+
+" Set colorscheme to default in Git bash sessions
+if system("echo -n \"$(uname)\"") == "MINGW64_NT-10.0"
+  colorscheme default
+endif
