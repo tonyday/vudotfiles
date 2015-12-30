@@ -4,7 +4,7 @@ alias befr="bef run"
 alias rc="befr rails c"
 alias gpom="git push origin master"
 alias gphm="git push heroku master"
-alias pc="psql -U postgres slowen_development -c"
+pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim
 # vim: set filetype=sh :
