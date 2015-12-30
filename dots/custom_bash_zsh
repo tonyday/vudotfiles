@@ -6,6 +6,7 @@ alias gpom="git push origin master"
 alias gphm="git push heroku master"
 alias gpbm="git push bitbucket master"
 alias gpgm="git push github master"
+alias hl="heroku local"
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim
