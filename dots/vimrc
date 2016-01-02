@@ -313,3 +313,6 @@ let g:airline#extensions#tabline#enabled = 1
 if system("echo -n \"$(uname)\"") == "MINGW64_NT-10.0"
   colorscheme default
 endif
+
+set wildignorecase " enable case-insensitive filename completion
+set whichwrap=<,>,[,] " use left/right arrow keys to wrap in normal and insert modes
