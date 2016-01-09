@@ -2,6 +2,7 @@ alias be="bundle exec"
 alias bef="be foreman"
 alias befr="bef run"
 alias befrgt='befr --env .env.test guard'
+alias gff='git merge --ff-only'
 alias gpbm="git push bitbucket master"
 alias gpgm="git push github master"
 alias gphm="git push heroku master"
