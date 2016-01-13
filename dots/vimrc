@@ -39,7 +39,8 @@ set encoding=utf-8
 set visualbell     " shut vim up
 set noerrorbells
 set history=1000
-set autoread
+set noautoread " Force vim to ask about 'on disk' changes
+au CursorHold * checktime " Trigger check for 'on disk' file changes when cursor idle for 4 seconds
 
 "------------------------------------------------------------------------------
 " editing
