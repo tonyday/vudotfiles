@@ -281,18 +281,20 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>/ <plug>NERDCommenterToggle<CR>
 
 " Some Tony Day stuff
-map <silent> ,b :CtrlPBuffer<cr>
-map <silent> ,f :NERDTreeFind<cr>
-map <silent> ,<space> :nohl<cr>
 map <silent> ,, :Gdiff<cr>
 map <silent> ,. :q<cr>
-map <silent> ,n :set number!<cr>
-map <silent> ,w :set wrap!<cr>
-map <silent> ,p :set paste!<cr>
-map <silent> <space> <c-w>
+map <silent> ,<space> :nohl<cr>
+map <silent> ,b :CtrlPBuffer<cr>
+map <silent> ,c :set background=light<cr>:colorscheme default<cr>:hi CursorLine cterm=none ctermbg=lightgray<cr>
 map <silent> ,d :set background=dark<cr>:colorscheme solarized<cr>
+map <silent> ,f :NERDTreeFind<cr>
 map <silent> ,l :set background=light<cr>:colorscheme solarized<cr>
-map <silent> ,c :set background=light<cr>:colorscheme default<cr>
+map <silent> ,n :set number!<cr>
+map <silent> ,p :set paste!<cr>
+map <silent> ,r mzggVG=`z
+map <silent> ,t :b#<cr>
+map <silent> ,w :set wrap!<cr>
+map <silent> <space> <c-w>
 
 " Tell CtrlP to show dot files
 let g:ctrlp_show_hidden = 1
