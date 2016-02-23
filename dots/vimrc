@@ -28,6 +28,8 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+let g:hl_matchit_enable_on_vim_startup = 1
 
 "------------------------------------------------------------------------------
 " basic
@@ -283,9 +285,9 @@ map <leader>/ <plug>NERDCommenterToggle<CR>
 " Some Tony Day stuff
 map <silent> ,, :Gdiff<cr>
 map <silent> ,. :q<cr>
-map <silent> ,<space> :nohl<cr>
+map <silent> ,<space> :set hls!<cr>
 map <silent> ,b :CtrlPBuffer<cr>
-map <silent> ,c :set background=light<cr>:colorscheme default<cr>:hi CursorLine cterm=none ctermbg=lightgray<cr>
+map <silent> ,c :set background=light<cr>:colorscheme default<cr>:hi CursorLine cterm=none ctermbg=lightgray<cr>:hi Search cterm=none ctermbg=lightyellow<cr>
 map <silent> ,d :set background=dark<cr>:colorscheme solarized<cr>
 map <silent> ,f :NERDTreeFind<cr>
 map <silent> ,l :set background=light<cr>:colorscheme solarized<cr>

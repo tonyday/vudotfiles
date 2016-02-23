@@ -72,3 +72,4 @@ Plugin 'tpope/vim-endwise'
 Plugin 'mattn/emmet-vim'
 
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'vimtaku/hl_matchit.vim'
