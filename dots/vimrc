@@ -294,6 +294,7 @@ map <silent> ,l :set background=light<cr>:colorscheme solarized<cr>
 map <silent> ,n :set number!<cr>
 map <silent> ,p :set paste!<cr>
 map <silent> ,r mzggVG=`z
+map <silent> ,s :setlocal spell spelllang=en_nz<cr>
 map <silent> ,t :b#<cr>
 map <silent> ,w :set wrap!<cr>
 map <silent> <space> <c-w>
@@ -317,7 +318,12 @@ let g:airline#extensions#tabline#enabled = 1
 " Set colorscheme to default in Git bash sessions
 if system("echo -n \"$(uname)\"") == "MINGW64_NT-10.0"
   colorscheme default
+  hi Cursorline cterm=none ctermbg=LightGray
+  hi DiffAdd ctermbg=4 ctermfg=Black
+  hi DiffChange ctermbg=5 ctermfg=Black
+  hi DiffDelete cterm=bold ctermfg=Black ctermbg=6
 endif
 
 set wildignorecase " enable case-insensitive filename completion
 set whichwrap=<,>,[,] " use left/right arrow keys to wrap in normal and insert modes
+set diffopt+=iwhite " Ignore whitespace when diffing
