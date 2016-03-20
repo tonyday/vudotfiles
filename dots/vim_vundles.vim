@@ -73,3 +73,4 @@ Plugin 'mattn/emmet-vim'
 
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'vimtaku/hl_matchit.vim'
+Plugin 'elixir-lang/vim-elixir'
