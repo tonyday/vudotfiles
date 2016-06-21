@@ -187,9 +187,18 @@ endif
 let g:ackprg="ag --nogroup --nocolor --column"
 
 " https://github.com/carlhuda/janus/blob/master/janus/vim/tools/janus/after/plugin/syntastic.vim
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_auto_loc_list=2
+" let g:syntastic_enable_signs=1
+" let g:syntastic_quiet_messages = {'level': 'warnings'}
+" let g:syntastic_auto_loc_list=2
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """ nerdtree
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.rbc$', '\.rbo$', '\.class$', '\.o$', '\~$']
@@ -262,8 +271,8 @@ map <Down> gj
 map <Up> gk
 
 " ctrl-p
-map <C-t> :CtrlP<CR>
-imap <C-t> <ESC>:CtrlP<CR>
+" map <C-t> :CtrlP<CR>
+" imap <C-t> <ESC>:CtrlP<CR>
 map <C-p> :CtrlP<CR>
 imap <C-p> <ESC>:CtrlP<CR>
 
@@ -297,6 +306,7 @@ map <silent> ,r mzggVG=`z
 map <silent> ,s :setlocal spell spelllang=en_nz<cr>
 map <silent> ,t :b#<cr>
 map <silent> ,w :set wrap!<cr>
+map ,z :set foldmethod=syntax<cr>:set foldlevel=
 map <silent> <space> <c-w>
 
 " Tell CtrlP to show dot files
@@ -329,4 +339,7 @@ set whichwrap=<,>,[,] " use left/right arrow keys to wrap in normal and insert m
 set diffopt+=iwhite " Ignore whitespace when diffing
 
 " New favourite colorscheme
-silent! colorscheme Crystallite
+silent! colorscheme stereokai
+
+" Enable standardjs syntax checking
+let g:syntastic_javascript_checkers = ['standard']
