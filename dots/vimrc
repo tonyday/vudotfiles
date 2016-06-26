@@ -339,7 +339,9 @@ set whichwrap=<,>,[,] " use left/right arrow keys to wrap in normal and insert m
 set diffopt+=iwhite " Ignore whitespace when diffing
 
 " New favourite colorscheme
-silent! colorscheme stereokai
+silent! colorscheme vividchalk
+" Get rid of underline on current line (why do they do it in the first place ?)
+highlight CursorLine cterm=none
 
 " Enable standardjs syntax checking
 let g:syntastic_javascript_checkers = ['standard']
