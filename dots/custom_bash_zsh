@@ -10,6 +10,9 @@ alias gphm="git push heroku master"
 alias gpom="git push origin master"
 alias hl="heroku local"
 alias rc="befr rails c"
+alias cop="befr rubocop"
+alias std="standard **/*.js **/*.es6"
+alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && be rubocop && standard"
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim
