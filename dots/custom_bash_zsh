@@ -12,7 +12,7 @@ alias hl="heroku local"
 alias rc="befr rails c"
 alias cop="befr rubocop"
 alias std="standard **/*.js **/*.es6"
-alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && be rubocop && standard"
+alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && cop && std"
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim
