@@ -14,6 +14,7 @@ alias cop="befr rubocop"
 alias std="standard **/*.js **/*.es6"
 alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && cop && std"
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
+pcq () { psql -U postgres "${PWD##*/}"_development ; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim
 # vim: set filetype=sh :
