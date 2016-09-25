@@ -11,7 +11,7 @@ alias gpom="git push origin master"
 alias hl="heroku local"
 alias rc="befr rails c"
 alias cop="befr rubocop"
-alias std="standard **/*.js **/*.es6"
+alias std="standard --verbose **/*.js **/*.es6"
 alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && cop && std"
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pcq () { psql -U postgres "${PWD##*/}"_development ; }
