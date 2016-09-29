@@ -3,6 +3,7 @@ alias bef="be foreman"
 alias befr="bef run"
 alias befrgt='befr --env .env.test guard'
 alias brbr="bundle exec rake && bundle exec rubocop"
+alias gfap='git fetch --all --prune'
 alias gff='git merge --ff-only'
 alias gpbm="git push bitbucket master"
 alias gpgm="git push github master"

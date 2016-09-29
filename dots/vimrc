@@ -348,6 +348,10 @@ let g:syntastic_javascript_checkers = ['standard']
 
 " Treat ES6 files as Javascript
 au BufNewFile,BufRead *.es6 setlocal ft=javascript
+
 " Format .js and .es6 files with standard-format on write
-autocmd bufwritepost *.js,*.es6 silent !standard-format -w %
+" Disabled (2016-09-29) because it seems to do some weird formatting
+" autocmd bufwritepost *.js,*.es6 silent !standard-format -w %
+
+" Read any changed files automatically
 set autoread
