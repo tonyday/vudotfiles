@@ -14,6 +14,7 @@ alias rc="befr rails c"
 alias cop="befr rubocop"
 alias std="standard --verbose **/*.js **/*.es6"
 alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && cop && std"
+alias v="vagrant"
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pcq () { psql -U postgres "${PWD##*/}"_development ; }
 export LESS=-SR
