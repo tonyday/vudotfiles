@@ -13,9 +13,12 @@ alias hl="heroku local"
 alias rc="befr rails c"
 alias cop="befr rubocop"
 alias std="standard --verbose **/*.js **/*.es6"
-alias tst="SEEMYSITE_DATABASE_USERID=postgres be rake test && cop && std"
+alias tst="be rake test && cop && std"
 alias v="vagrant"
+alias glolae='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an - %ae>%Creset'\'' --abbrev-commit --all' # my version of glola - includes email
+p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
+pq () { psql "${PWD##*/}"_development ; }
 pcq () { psql -U postgres "${PWD##*/}"_development ; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim

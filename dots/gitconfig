@@ -7,7 +7,7 @@
     pom = push origin master
 [user]
     name = Tony Day
-    email = tony@lazylabs.com
+	useConfigOnly = true
 [core]
     editor = vim
     whitespace = off
