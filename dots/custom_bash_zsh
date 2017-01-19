@@ -1,3 +1,4 @@
+alias brs="bundle exec rails server"
 alias be="bundle exec"
 alias bef="be foreman"
 alias befr="bef run"
