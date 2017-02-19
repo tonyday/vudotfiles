@@ -16,3 +16,5 @@
     statusuoption = false
 [color]
     ui = true
+[http]
+	postBuffer = 1048576000
