@@ -1,4 +1,5 @@
 alias rubochange='git ls-files --others --exclude-standard --modified | grep -v schema.rb | grep -v ".yml" | xargs rubocop'
+alias kwa='ruby -ane'
 alias brs="bundle exec rails server"
 alias brc="bundle exec rails console"
 alias be="bundle exec"
