@@ -27,4 +27,5 @@ pcq () { psql -U postgres "${PWD##*/}"_development ; }
 export LESS=-SR
 export BUNDLER_EDITOR=vim
 export BUNDLE_GITHUB__HTTPS=true
+export PATH=~/.local/bin:$PATH
 # vim: set filetype=sh :
