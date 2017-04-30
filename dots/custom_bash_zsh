@@ -28,4 +28,5 @@ export LESS=-SR
 export BUNDLER_EDITOR=vim
 export BUNDLE_GITHUB__HTTPS=true
 export PATH=~/.local/bin:$PATH
+ze () { ARGS=$@; zeus $@; ZE_EC=$?; stty sane; if [ $ZE_EC = 2 ]; then ze $ARGS; fi }
 # vim: set filetype=sh :
