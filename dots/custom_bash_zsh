@@ -30,5 +30,5 @@ export BUNDLE_GITHUB__HTTPS=true
 export PATH=~/.local/bin:$PATH
 # See https://github.com/burke/zeus/issues/469
 ze () { zeus $@; stty sane }
-dff () { diff $@ $@.after }
+dff () { clear; diff $@ $@.after }
 # vim: set filetype=sh :
