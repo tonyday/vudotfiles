@@ -31,4 +31,5 @@ export PATH=~/.local/bin:$PATH
 # See https://github.com/burke/zeus/issues/469
 ze () { zeus $@; stty sane }
 dff () { clear; diff $@ $@.after }
+zz () { clear; rubocop $@; reek $@ }
 # vim: set filetype=sh :
