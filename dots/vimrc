@@ -339,7 +339,7 @@ set whichwrap=<,>,[,] " use left/right arrow keys to wrap in normal and insert m
 set diffopt+=iwhite " Ignore whitespace when diffing
 
 " New favourite colorscheme
-execute "normal ,c"
+" execute "normal ,c"
 
 " Get rid of underline on current line (why do they do it in the first place ?)
 highlight CursorLine cterm=none
