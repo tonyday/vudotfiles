@@ -1,25 +1,20 @@
-alias rubochange='git ls-files --others --exclude-standard --modified | grep -v schema.rb | grep -v ".yml" | xargs rubocop'
-alias kwa='ruby -ane'
-alias brs="bundle exec rails server"
-alias brc="bundle exec rails console"
+alias >| ~/.current_aliases
+unalias -a
 alias be="bundle exec"
-alias bef="be foreman"
-alias befr="bef run"
-alias befrgt='befr --env .env.test guard'
-alias brbr="bundle exec rake && bundle exec rubocop"
+alias brc="bundle exec rails console"
+alias brs="bundle exec rails server"
+alias g='git'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit --verbose'
+alias gco='git checkout'
+alias gf='git diff'
 alias gfap='git fetch --all --prune'
 alias gff='git merge --ff-only'
-alias gpbm="git push bitbucket master"
-alias gpgm="git push github master"
-alias gphm="git push heroku master"
-alias gpom="git push origin master"
-alias hl="heroku local"
-alias rc="befr rails c"
-alias cop="befr rubocop"
-alias std="standard --verbose **/*.js **/*.es6"
-alias tst="be rake test && cop && std"
-alias v="vagrant"
 alias glolae='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an - %ae>%Creset'\'' --abbrev-commit --all' # my version of glola - includes email
+alias gpom="git push origin master"
+alias gs='git status --short'
+alias l='ls -lAh'
 p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pq () { psql "${PWD##*/}"_development ; }
