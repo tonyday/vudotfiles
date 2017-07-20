@@ -11,7 +11,7 @@ alias gco='git checkout'
 alias gf='git diff'
 alias gfap='git fetch --all --prune'
 alias gff='git merge --ff-only'
-alias glolae='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an - %ae>%Creset'\'' --abbrev-commit --all' # my version of glola - includes email
+alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an - %ae>%Creset'\'' --abbrev-commit --all' # my version of glola - includes email
 alias gpom="git push origin master"
 alias gs='git status --short'
 alias l='ls -lAh'
