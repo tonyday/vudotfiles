@@ -1,0 +1,16 @@
+<!-- See https://stackoverflow.com/a/13372744 -->
+<!-- Save as ~/Library/LaunchAgents/com.lazylabs.macblackbox.plist -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Label</key>
+   <string>com.lazylabs.macblackbox</string>
+   <key>Program</key>
+   <string>/Users/tonyday/MacBlackBox/capture.sh</string>
+   <key>RunAtLoad</key>
+   <true/>
+   <key>KeepAlive</key>
+   <true/>
+</dict>
+</plist>
