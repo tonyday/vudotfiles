@@ -4,10 +4,11 @@ alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
 alias g='git'
-alias gd='git diff'
 alias ga='git add'
 alias gc='git commit --verbose'
+alias gcall='git add . && git commit -m'
 alias gco='git checkout'
+alias gd='git diff'
 alias gf='git diff'
 alias gfap='git fetch --all --prune'
 alias gff='git merge --ff-only'
@@ -15,6 +16,10 @@ alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %C
 alias gpom="git push origin master"
 alias gs='git status --short'
 alias l='ls -lAh'
+alias rb='bundle exec rubocop --rails -D'
+alias sp='bin/spring'
+alias s='sentinel'
+alias temp_branch='git checkout -b temp.$(date +%s)'
 p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pq () { psql "${PWD##*/}"_development ; }
