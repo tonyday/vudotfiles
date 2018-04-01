@@ -4,3 +4,5 @@
 .generators
 tonylocal/
 developerlocal/
+.env
+.env.test
