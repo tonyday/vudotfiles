@@ -15,10 +15,11 @@ alias gff='git merge --ff-only'
 alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an - %ae>%Creset'\'' --abbrev-commit --all' # my version of glola - includes email
 alias gpom="git push origin master"
 alias gs='git status --short'
+alias h="heroku"
 alias l='ls -lAh'
 alias rb='bundle exec rubocop --rails -D'
-alias sp='bin/spring'
 alias s='sentinel'
+alias sp='bin/spring'
 alias temp_branch='git checkout -b temp.$(date +%s)'
 p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
