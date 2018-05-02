@@ -3,6 +3,7 @@ unalias -a
 alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
+alias d="docker"
 alias g='git'
 alias ga='git add'
 alias gc='git commit --verbose'
