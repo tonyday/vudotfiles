@@ -1,1 +1,2 @@
 Pry.config.theme = 'solarized'
+ActiveRecord::Base.logger = Logger.new(STDOUT)
