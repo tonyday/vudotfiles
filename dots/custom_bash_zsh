@@ -24,6 +24,7 @@ alias rb='bundle exec rubocop --rails -D'
 alias s='sentinel'
 alias sp='bin/spring'
 alias temp_branch='git checkout -b temp.$(date +%s)'
+alias v="vagrant"
 p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pq () { psql "${PWD##*/}"_development ; }
@@ -36,4 +37,6 @@ export PATH=~/.local/bin:$PATH
 ze () { zeus $@; stty sane }
 dff () { clear; diff $@ $@.after }
 zz () { clear; rubocop $@; reek $@ }
+# enable direnv https://direnv.net/
+eval "$(direnv hook zsh)"
 # vim: set filetype=sh :
