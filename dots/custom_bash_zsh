@@ -34,9 +34,7 @@ export BUNDLER_EDITOR=vim
 export BUNDLE_GITHUB__HTTPS=true
 export PATH=~/.local/bin:$PATH
 # See https://github.com/burke/zeus/issues/469
-ze () { zeus $@; stty sane }
-dff () { clear; diff $@ $@.after }
-zz () { clear; rubocop $@; reek $@ }
-# enable direnv https://direnv.net/
-eval "$(direnv hook zsh)"
+ze () { zeus "$@"; stty sane; }
+dff () { clear; diff "$@" "$@".after; }
+zz () { clear; rubocop "$@"; reek "$@"; }
 # vim: set filetype=sh :
