@@ -4,6 +4,7 @@ alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
 alias d="docker"
+alias dm-disk='docker run --rm -it -v /:/docker alpine:edge $@'
 alias g='git'
 alias ga='git add'
 alias gc='git commit --verbose'
