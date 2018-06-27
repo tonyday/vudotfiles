@@ -1,5 +1,6 @@
 alias >| ~/.current_aliases
 unalias -a
+alias rs="bin/rspec spec/"
 alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
