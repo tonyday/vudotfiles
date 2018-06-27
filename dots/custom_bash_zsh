@@ -1,6 +1,5 @@
 alias >| ~/.current_aliases
 unalias -a
-alias rs="bin/rspec spec/"
 alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
@@ -41,4 +40,5 @@ export PATH=~/.local/bin:$PATH
 ze () { zeus "$@"; stty sane; }
 dff () { clear; diff "$@" "$@".after; }
 zz () { clear; rubocop "$@"; reek "$@"; }
+rs () { bin/rspec spec/"$@"; }
 # vim: set filetype=sh :
