@@ -23,6 +23,7 @@ alias hl='cp ~/.netrc.lazylabs ~/.netrc'
 alias hr='cp ~/.netrc.reinteractive ~/.netrc'
 alias l='ls -lAh'
 alias r="bin/rails"
+alias rr="bin/rake"
 alias rb='bundle exec rubocop --rails -D'
 alias s='sentinel'
 alias sp='bin/spring'
