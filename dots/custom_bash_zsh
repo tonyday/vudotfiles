@@ -8,6 +8,7 @@ alias dc="docker-compose"
 alias dm-disk='docker run --rm -it -v /:/docker alpine:edge $@'
 alias g='git'
 alias ga='git add'
+alias gbl='git branch --sort=-committerdate | head -n 10'
 alias gc='git commit --verbose'
 alias gcall='git add . && git commit -m'
 alias gco='git checkout'
@@ -23,8 +24,8 @@ alias hl='cp ~/.netrc.lazylabs ~/.netrc'
 alias hr='cp ~/.netrc.reinteractive ~/.netrc'
 alias l='ls -lAh'
 alias r="bin/rails"
-alias rr="bin/rake"
 alias rb='bundle exec rubocop --rails -D'
+alias rr="bin/rake"
 alias s='sentinel'
 alias sp='bin/spring'
 alias temp_branch='git checkout -b temp.$(date +%s)'
