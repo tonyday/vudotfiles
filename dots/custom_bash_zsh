@@ -26,6 +26,7 @@ alias l='ls -lAh'
 alias r="bin/rails"
 alias rb='bundle exec rubocop --rails -D'
 alias rr="bin/rake"
+alias rs="bin/rspec"
 alias s='sentinel'
 alias sp='bin/spring'
 alias temp_branch='git checkout -b temp.$(date +%s)'
@@ -42,5 +43,4 @@ export PATH=~/.local/bin:$PATH
 ze () { zeus "$@"; stty sane; }
 dff () { clear; diff "$@" "$@".after; }
 zz () { clear; rubocop "$@"; reek "$@"; }
-rs () { bin/rspec spec/"$@"; }
 # vim: set filetype=sh :
