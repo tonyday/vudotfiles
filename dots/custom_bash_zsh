@@ -25,6 +25,7 @@ alias hr='cp ~/.netrc.reinteractive ~/.netrc'
 alias l='ls -lAh'
 alias r="bin/rails"
 alias rb='bundle exec rubocop --rails -D'
+alias rbl='bundle exec rubocop --config .rubocop.local.yml'
 alias rr="bin/rake"
 alias rs="bin/rspec"
 alias s='sentinel'
