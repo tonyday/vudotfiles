@@ -30,6 +30,7 @@ alias rr="bin/rake"
 alias rs="bin/rspec"
 alias s='sentinel'
 alias sp='bin/spring'
+alias start_js_server='RAILS_ENV=test WEBPACK_URL="https://host.docker.internal:8080" yarn start'
 alias temp_branch='git checkout -b temp.$(date +%s)'
 alias v="vagrant"
 p () { psql "${PWD##*/}"_development -c "$@"; }
