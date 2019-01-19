@@ -7,7 +7,7 @@
     pom = push origin master
 [user]
     name = Tony Day
-	useConfigOnly = true
+   useConfigOnly = true
 [core]
     editor = vim
     whitespace = off
@@ -17,10 +17,13 @@
 [color]
     ui = true
 [http]
-	postBuffer = 1048576000
+    postBuffer = 1048576000
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[diff "enc"]
+    textconv = rails encrypted:show
+    cachetextconv = false
