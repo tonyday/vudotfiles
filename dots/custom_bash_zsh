@@ -29,6 +29,7 @@ alias rbl='bundle exec rubocop --config .rubocop.local.yml'
 alias rr="bin/rake"
 alias rs="bin/rspec"
 alias s='sentinel'
+alias slet="git config --local user.email tony@lazylabs.com"
 alias sp='bin/spring'
 alias start_js_server='RAILS_ENV=test WEBPACK_URL="https://host.docker.internal:8080" yarn start'
 alias temp_branch='git checkout -b temp.$(date +%s)'
@@ -45,4 +46,6 @@ export PATH=~/.local/bin:$PATH
 ze () { zeus "$@"; stty sane; }
 dff () { clear; diff "$@" "$@".after; }
 zz () { clear; rubocop "$@"; reek "$@"; }
+export NVM_DIR=~/.nvm
+. "/usr/local/opt/nvm/nvm.sh"
 # vim: set filetype=sh :
