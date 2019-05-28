@@ -6,3 +6,4 @@ tonylocal/
 developerlocal/
 .env
 .env.test
+.vscode/
