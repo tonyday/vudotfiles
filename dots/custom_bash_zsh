@@ -22,6 +22,7 @@ alias gs='git status --short'
 alias h="heroku"
 alias hl='cp ~/.netrc.lazylabs ~/.netrc'
 alias hr='cp ~/.netrc.reinteractive ~/.netrc'
+alias hrc='heroku run bundle exec rails console --remote'
 alias l='ls -lAh'
 alias r="bin/rails"
 alias rb='bundle exec rubocop --rails -D'
