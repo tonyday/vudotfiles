@@ -40,7 +40,7 @@ p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pq () { psql "${PWD##*/}"_development ; }
 pcq () { psql -U postgres "${PWD##*/}"_development ; }
-export LESS=-SR
+export LESS=-iRS
 export BUNDLER_EDITOR=vim
 export BUNDLE_GITHUB__HTTPS=true
 export PATH=~/.local/bin:$PATH
@@ -50,4 +50,7 @@ dff () { clear; diff "$@" "$@".after; }
 zz () { clear; rubocop "$@"; reek "$@"; }
 export NVM_DIR=~/.nvm
 . "/usr/local/opt/nvm/nvm.sh"
+
+# Add bin folder to PATH (per APE instructions - https://github.com/reinteractive/APEMobileWeb)
+export PATH=bin:$PATH
 # vim: set filetype=sh :
