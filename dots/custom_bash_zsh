@@ -1,11 +1,17 @@
 alias >| ~/.current_aliases
 unalias -a
+alias mydb='mysql -h $MYSQL_SERVER -P $MYSQL_PORT -u $MYSQL_USERNAME -D $MYSQL_DATABASE -A'
 alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
 alias d="docker"
 alias dc="docker-compose"
+alias dcreate='docker create --hostname=$DEV_SERVER_NAME --name=$DEV_SERVER_NAME --volume=$HOME/.ssh:/home/docker/.ssh --volume=$(pwd):/home/docker/app --publish=3000:3000 dockerdev:001'
+alias dexec='docker exec -it $DEV_SERVER_NAME zsh'
 alias dm-disk='docker run --rm -it -v /:/docker alpine:edge $@'
+alias dstart='docker start $DEV_SERVER_NAME'
+alias dstatus='docker ps -a | grep $DEV_SERVER_NAME'
+alias dstop='docker stop $DEV_SERVER_NAME'
 alias g='git'
 alias ga='git add'
 alias gbl='git branch --sort=-committerdate | head -n 10'
@@ -17,6 +23,7 @@ alias gf='git diff'
 alias gfap='git fetch --all --prune'
 alias gff='git merge --ff-only'
 alias gl='git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an - %ae>%Creset'\'' --abbrev-commit --all' # my version of glola - includes email
+alias gpff='git pull --ff-only'
 alias gpom="git push origin master"
 alias gs='git status --short'
 alias h="heroku"
@@ -25,6 +32,8 @@ alias hr='cp ~/.netrc.reinteractive ~/.netrc'
 alias hrb='heroku run bash --remote'
 alias hrc='heroku run bundle exec rails console --remote'
 alias l='ls -lAh'
+alias loc="cp .envrc.database.local .envrc.database && direnv allow ."
+alias mp='multipass'
 alias r="bin/rails"
 alias rb='bundle exec rubocop --rails -D'
 alias rbl='bundle exec rubocop --config .rubocop.local.yml'
@@ -36,10 +45,23 @@ alias sp='bin/spring'
 alias start_js_server='RAILS_ENV=test WEBPACK_URL="https://host.docker.internal:8080" yarn start'
 alias temp_branch='git checkout -b temp.$(date +%s)'
 alias v="vagrant"
+alias wip="cp .envrc.database.wippy .envrc.database && direnv allow ."
 p () { psql "${PWD##*/}"_development -c "$@"; }
 pc () { psql -U postgres "${PWD##*/}"_development -c "$@"; }
 pq () { psql "${PWD##*/}"_development ; }
 pcq () { psql -U postgres "${PWD##*/}"_development ; }
+
+# https://stackoverflow.com/questions/4421633/who-is-listening-on-a-given-tcp-port-on-mac-os-x/30029855#30029855
+listening() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
+
 export LESS=-iRS
 export BUNDLER_EDITOR=vim
 export BUNDLE_GITHUB__HTTPS=true
@@ -48,6 +70,7 @@ export PATH=~/.local/bin:$PATH
 ze () { zeus "$@"; stty sane; }
 dff () { clear; diff "$@" "$@".after; }
 zz () { clear; rubocop "$@"; reek "$@"; }
+wiptun () { ssh "$@" -N -L 1234:maria:3306 }
 export NVM_DIR=~/.nvm
 . "/usr/local/opt/nvm/nvm.sh"
 
