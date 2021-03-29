@@ -1,0 +1,4 @@
+# Adjust to suit RubyMine version
+rm -f ~/Library/Application\ Support/RubyMine2019.3
+rm -rf ~/Library/Preferences/RubyMine2019.3/
+rm -rf ~/Library/Caches/RubyMine2019.3
