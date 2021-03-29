@@ -7,3 +7,5 @@ developerlocal/
 .env
 .env.test
 .vscode/
+.envrc
+.envrc.*
