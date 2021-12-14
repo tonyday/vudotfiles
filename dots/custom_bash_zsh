@@ -1,6 +1,5 @@
 alias >| ~/.current_aliases
 unalias -a
-alias mydb='mysql -h $MYSQL_SERVER -P $MYSQL_PORT -u $MYSQL_USERNAME -D $MYSQL_DATABASE -A'
 alias be="bundle exec"
 alias brc="bundle exec rails console"
 alias brs="bundle exec rails server"
@@ -14,7 +13,7 @@ alias dstatus='docker ps -a | grep $DEV_SERVER_NAME'
 alias dstop='docker stop $DEV_SERVER_NAME'
 alias g='git'
 alias ga='git add'
-alias gbl='git branch --sort=-committerdate | head -n 10'
+alias gbl='git branch --verbose --sort=-committerdate | head -n 10'
 alias gc='git commit --verbose'
 alias gcall='git add . && git commit -m'
 alias gco='git checkout'
@@ -34,9 +33,11 @@ alias hrc='heroku run bundle exec rails console --remote'
 alias l='ls -lAh'
 alias loc="cp .envrc.database.local .envrc.database && direnv allow ."
 alias mp='multipass'
+alias mydb='mysql -h $MYSQL_SERVER -P $MYSQL_PORT -u $MYSQL_USERNAME -D $MYSQL_DATABASE -A'
 alias r="bin/rails"
 alias rb='bundle exec rubocop --rails -D'
 alias rbl='bundle exec rubocop --config .rubocop.local.yml'
+alias rdl='if test -f log/development.log.gz; then; mv log/development.log.{gz,gz.$(date "+%F_%T")}; fi && if test -f log/development.log; then; gzip log/development.log; fi'
 alias rr="bin/rake"
 alias rs="bin/rspec"
 alias s='sentinel'
@@ -72,8 +73,11 @@ dff () { clear; diff "$@" "$@".after; }
 zz () { clear; rubocop "$@"; reek "$@"; }
 wiptun () { ssh "$@" -N -L 1234:maria:3306 }
 export NVM_DIR=~/.nvm
-. "/usr/local/opt/nvm/nvm.sh"
+# . "/usr/local/opt/nvm/nvm.sh"
 
 # Add bin folder to PATH (per APE instructions - https://github.com/reinteractive/APEMobileWeb)
 export PATH=bin:$PATH
 # vim: set filetype=sh :
+
+# To make file paths clickable inside the web browser
+export IHP_EDITOR="code --goto"

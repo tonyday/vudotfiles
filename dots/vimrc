@@ -336,7 +336,11 @@ endif
 
 set wildignorecase " enable case-insensitive filename completion
 set whichwrap=<,>,[,] " use left/right arrow keys to wrap in normal and insert modes
-set diffopt+=iwhite " Ignore whitespace when diffing
+" set diffopt+=iwhite " Ignore whitespace when diffing
+if &diff
+    set diffopt-=internal
+    set diffopt+=vertical
+endif
 
 " New favourite colorscheme
 " execute "normal ,c"
