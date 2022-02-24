@@ -9,3 +9,4 @@ developerlocal/
 .vscode/
 .envrc
 .envrc.*
+.postgres_data
