@@ -34,6 +34,11 @@ alias l='ls -lAh'
 alias loc="cp .envrc.database.local .envrc.database && direnv allow ."
 alias mp='multipass'
 alias mydb='mysql -h $MYSQL_SERVER -P $MYSQL_PORT -u $MYSQL_USERNAME -D $MYSQL_DATABASE -A'
+alias pg_down='docker rm "$(basename $PWD)"_postgres'
+alias pg_start='docker start "$(basename $PWD)"_postgres'
+alias pg_stop='docker stop "$(basename $PWD)"_postgres'
+alias pg_up='docker run --detach --name "$(basename $PWD)"_postgres --publish 5432:5432 --volume $PWD/_postgres_data:/var/lib/postgresql/data -e POSTGRES_HOST_AUTH_METHOD=trust postgres:latest'
+alias psq='docker exec -it "$(basename $PWD)"_postgres psql -U postgres'
 alias r="bin/rails"
 alias rb='bundle exec rubocop --rails -D'
 alias rbl='bundle exec rubocop --config .rubocop.local.yml'
